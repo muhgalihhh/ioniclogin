@@ -1,4 +1,4 @@
-<table style="width:100%;>
+<table>
   <tr>
     <td style="text-align: center;">
       <img src="https://github.com/user-attachments/assets/595d8118-e3e4-48a0-ab91-1e181ead8217" height="120" alt="anime-yes"/>
@@ -9,7 +9,7 @@
       <h5>Shift: E (Baru)</h5>
     </td>
   </tr>
-</table>****
+</table>
 
 ### Penjelasan Detail Proses Login
 
