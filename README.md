@@ -1,5 +1,3 @@
-Berikut adalah README.md yang telah diperbarui sesuai permintaan Anda, dengan **Perkenalan** dipindahkan sebelum **Daftar Isi**:
-
 
 <table>
   <tr>
