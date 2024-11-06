@@ -1,3 +1,6 @@
+Berikut adalah README.md yang telah diperbarui sesuai permintaan Anda, dengan **Perkenalan** dipindahkan sebelum **Daftar Isi**:
+
+
 <table>
   <tr>
     <td style="text-align: center;">
@@ -11,28 +14,23 @@
   </tr>
 </table>
 
-### Penjelasan Detail Proses Login
 
-#### Flowchart Login
 
-Berikut adalah flowchart proses login dari mulai input pengguna hingga akses ke halaman yang dilindungi:
+# 📘 Daftar Isi
 
-```mermaid
-flowchart TD
-    A[Pengguna mengisi Form Login] --> B{Username & Password Terisi?}
-    B -- Tidak --> C[Notifikasi: Username atau Password Tidak Boleh Kosong]
-    B -- Ya --> D[AuthenticationService.postMethod mengirim data ke API]
-    D --> E{Login Berhasil?}
-    E -- Tidak --> F[Notifikasi: Username atau Password Salah]
-    E -- Ya --> G[AuthenticationService.saveData menyimpan token & username]
-    G --> H[Update authenticationState ke true]
-    H --> I[Redirect ke halaman Home]
-    I --> J{Akses ke halaman dilindungi}
-    J --> K{authenticationState = true?}
-    K -- Tidak --> L[Redirect ke Login]
-    K -- Ya --> M[Halaman dapat diakses]
-```
+1. [🔐 Penjelasan Detail Proses Login](#-penjelasan-detail-proses-login)
+   - [🔄 Flowchart Login](#-flowchart-login)
+2. [📜 Langkah-langkah Proses Login](#-langkah-langkah-proses-login)
+   - [1. Deklarasi HTTP Client](#1-deklarasi-http-client)
+   - [2. Form Login](#2-form-login)
+   - [3. Pengiriman Data Login](#3-pengiriman-data-login)
+   - [4. Penyimpanan Token Autentikasi](#4-penyimpanan-token-autentikasi)
+   - [5. Redirection ke Halaman Home](#5-redirection-ke-halaman-home)
+   - [6. Proteksi Halaman dengan Guard](#6-proteksi-halaman-dengan-guard)
 
+---
+
+## 🔐 Penjelasan Detail Proses Login
 
 Pada aplikasi ini, proses login menghubungkan pengguna dengan API untuk verifikasi akun dan menyimpan status autentikasi secara lokal. Berikut langkah-langkah rinci proses login yang terjadi dalam kode:
 
@@ -95,3 +93,29 @@ Pada aplikasi ini, proses login menghubungkan pengguna dengan API untuk verifika
        })
    );
    ```
+
+---
+
+## 🔄 Flowchart Login
+
+Berikut adalah flowchart proses login dari mulai input pengguna hingga akses ke halaman yang dilindungi:
+
+```mermaid
+flowchart TD
+    A[Pengguna mengisi Form Login] --> B{Username & Password Terisi?}
+    B -- Tidak --> C[Notifikasi: Username atau Password Tidak Boleh Kosong]
+    B -- Ya --> D[AuthenticationService.postMethod mengirim data ke API]
+    D --> E{Login Berhasil?}
+    E -- Tidak --> F[Notifikasi: Username atau Password Salah]
+    E -- Ya --> G[AuthenticationService.saveData menyimpan token & username]
+    G --> H[Update authenticationState ke true]
+    H --> I[Redirect ke halaman Home]
+    I --> J{Akses ke halaman dilindungi}
+    J --> K{authenticationState = true?}
+    K -- Tidak --> L[Redirect ke Login]
+    K -- Ya --> M[Halaman dapat diakses]
+```
+
+---
+
+Sekarang, README.md Anda telah diatur sesuai permintaan dengan bagian **Perkenalan** di awal dan **Daftar Isi** yang rapi.
